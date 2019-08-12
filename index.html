@@ -18,9 +18,246 @@
     <meta property="og:description" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/poster.png" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Reset -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <!-- custom style -->
+    <style>
+      html,
+      body {
+        min-height: 100vh;
+      }
+
+      body {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-bottom: 20px;
+      }
+      article {
+        max-width: 650px;
+      }
+
+      hr {
+        height: 6px;
+        border: 0;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,cd1b54+50,cd1b54+50,000000+100 */
+        background: #000000; /* Old browsers */
+        background: -moz-linear-gradient(
+          left,
+          #000000 0%,
+          #cd1b54 50%,
+          #cd1b54 50%,
+          #000000 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+          left,
+          #000000 0%,
+          #cd1b54 50%,
+          #cd1b54 50%,
+          #000000 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+          to right,
+          #000000 0%,
+          #cd1b54 50%,
+          #cd1b54 50%,
+          #000000 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+      }
+
+      .logo {
+        max-width: 100%;
+      }
+
+      .launch {
+        font-size: 2.2em;
+        text-align: center;
+      }
+
+      #countdown {
+        font-size: 1.5em;
+        text-align: center;
+        border: 3px solid #cd1b54;
+        border-radius: 6px;
+        padding: 15px;
+      }
+      .features-list {
+        text-align: left;
+        list-style-type: none;
+      }
+
+      .features-list li {
+        margin-bottom: 12px;
+      }
+
+      .features-title {
+        font-size: 2em;
+      }
+
+      .newsletter-title {
+        font-size: 1.5em;
+      }
+
+      .newsletter-form {
+        display: flex;
+        height: 40px;
+      }
+
+      .newsletter-form input[type='text'] {
+        flex: 2;
+        border: 3px solid #cd1b54;
+        border-radius: 6px;
+        background: #000000;
+        color: #ffffff;
+        font-size: 1.3em;
+        padding: 5px;
+      }
+      .newsletter-form button {
+        flex: 1;
+        margin-left: 7px;
+        border-radius: 6px;
+        color: #ffffff;
+        background: #cd1b54;
+        border: 0;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+      .credit {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+      }
+      .copy-right, .credit {
+        font-size: 0.8em;
+        margin-bottom: 15px;
+      }
+      a:link,
+      a:hover,
+      a:visited {
+        color: #cd1b54;
+        text-decoration: none;
+      }
+      .jgb-solutions:link {
+        color: #ff9800;
+      }
+
+      .jgb-solutions img {
+        display: inline-block;
+        width: 200px;
+      }
+      .mp3pam img {
+        display: inline-block;
+        width: 200px
+      }
+    </style>
   </head>
 
   <body>
-    MP3 Pam
+    <article>
+      <h1>
+        <img class="logo" src="/logo-trans-red-white.png" alt="MP3 Pam Logo" />
+      </h1>
+      <hr />
+      <h2 class="launch">🎉 First Launch on December 1st 🎊</h2>
+      <h3 id="countdown"></h3>
+      <hr />
+      <h4 class="features-title">🎁 🥳 Some of our features:</h4>
+      <ul class="features-list">
+        <li>✅ Unlimited Uploads</li>
+        <li>✅ Unlimited Downloads</li>
+        <li>✅ Unlimited PlayLists</li>
+        <li>✅ Unlimited Albums</li>
+        <li>✅ Unlimited Categories</li>
+        <li>✅ 100% Free</li>
+      </ul>
+      <hr />
+      <h3 class="newsletter-title">🗞 Subscribe To Receive Our Updates</h3>
+      <form
+        class="newsletter-form"
+        action="https://tinyletter.com/mp3pam"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://tinyletter.com/mp3pam', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+      >
+        <input type="text" name="email" id="tlemail" placeholder="Enter Your Email" />
+        <input type="hidden" value="1" name="embed" />
+        <button type="submit">😻 Subscribe Me Now!</button>
+      </form>
+      <hr />
+      <p class="copy-right">
+        &copy; 2019 All Rights Reserved.
+      </p>
+      <div class="credit">
+        <br />
+        <a href="/" class="mp3pam">
+          <img src="/logo-trans-red-white.png" /></a> &nbsp; is a product of &nbsp;
+        <a href="https://jgb.solutions" target="_blank" class="jgb-solutions"
+          ><img src="/logo-jgb-solutions-white-orange.png"
+        /></a>
+      </p>
+    </article>
+
+    <!-- JavaScript Countdown -->
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date('Dec 1, 2019 00:00:00').getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById('countdown').innerHTML =
+          days +
+          ' Days ' +
+          hours +
+          ' Hours ' +
+          minutes +
+          ' Minutes ' +
+          seconds +
+          ' Seconds ';
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById('countdown').innerHTML = 'LAUNCH DAY';
+        }
+      }, 1000);
+    </script>
   </body>
 </html>
