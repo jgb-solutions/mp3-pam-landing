@@ -93,6 +93,21 @@
         max-width: 100%;
       }
 
+      .poster-container {
+        margin-bottom: -32px;
+      }
+
+      .poster {
+        max-width: 100%;
+      }
+
+      @media screen and (max-width: 600px) {
+        .poster {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+
       .launch {
         font-size: 2.2em;
         text-align: center;
@@ -189,6 +204,9 @@
       <h1>
         <img class="logo" src="/logo-trans-red-white.png" alt="MP3 Pam Logo" />
       </h1>
+      <div class="poster-container">
+        <img class="poster" src="/poster-500x419.png" />
+      </div>
       <hr />
       <h2 class="launch">🎉 First Launch on December 1st 🎊</h2>
       <h3 id="countdown"></h3>
