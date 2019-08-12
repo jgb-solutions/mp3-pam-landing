@@ -38,7 +38,6 @@
 
       body {
         padding: 20px;
-        display: flex;
         align-items: center;
         justify-content: center;
         background-color: #000000;
@@ -54,6 +53,7 @@
         margin-bottom: 20px;
       }
       article {
+        margin: 0 auto;
         max-width: 650px;
       }
 
@@ -98,7 +98,7 @@
       }
 
       #countdown {
-        font-size: 1.5em;
+        font-size: 1.1em;
         text-align: center;
         border: 3px solid #cd1b54;
         border-radius: 6px;
@@ -118,7 +118,7 @@
       }
 
       .newsletter-title {
-        font-size: 1.5em;
+        font-size: 1.1em;
       }
 
       .newsletter-form {
@@ -127,7 +127,7 @@
       }
 
       .newsletter-form input[type='text'] {
-        flex: 2;
+        width: 80%;
         border: 3px solid #cd1b54;
         border-radius: 6px;
         background: #000000;
@@ -136,7 +136,6 @@
         padding: 5px;
       }
       .newsletter-form button {
-        flex: 1;
         margin-left: 7px;
         border-radius: 6px;
         color: #ffffff;
@@ -147,9 +146,10 @@
       }
       .credit {
         text-transform: uppercase;
-        display: flex;
         align-items: center;
+        display: flex;
       }
+
       .copy-right, .credit {
         font-size: 0.8em;
         margin-bottom: 15px;
@@ -166,11 +166,19 @@
 
       .jgb-solutions img {
         display: inline-block;
-        width: 200px;
-      }
-      .mp3pam img {
-        display: inline-block;
         width: 200px
+      }
+
+      @media screen and (max-width: 600px) {
+        .credit {
+          display: block;
+        }
+        .jgb-solutions img {
+          width: 120px;
+        }
+        .newsletter-form button {
+          font-size: 1em;
+        }
       }
     </style>
   </head>
@@ -184,7 +192,7 @@
       <h2 class="launch">🎉 First Launch on December 1st 🎊</h2>
       <h3 id="countdown"></h3>
       <hr />
-      <h4 class="features-title">🎁 🥳 Some of our features:</h4>
+      <h4 class="features-title">🎁 🥳 Our Features:</h4>
       <ul class="features-list">
         <li>✅ Unlimited Uploads</li>
         <li>✅ Unlimited Downloads</li>
@@ -192,6 +200,7 @@
         <li>✅ Unlimited Albums</li>
         <li>✅ Unlimited Categories</li>
         <li>✅ 100% Free</li>
+        <li>✅ And more...</li>
       </ul>
       <hr />
       <h3 class="newsletter-title">🗞 Subscribe To Receive Our Updates</h3>
@@ -204,7 +213,7 @@
       >
         <input type="text" name="email" id="tlemail" placeholder="Enter Your Email" />
         <input type="hidden" value="1" name="embed" />
-        <button type="submit">😻 Subscribe Me Now!</button>
+        <button type="submit">Subscribe</button>
       </form>
       <hr />
       <p class="copy-right">
@@ -212,8 +221,7 @@
       </p>
       <div class="credit">
         <br />
-        <a href="/" class="mp3pam">
-          <img src="/logo-trans-red-white.png" /></a> &nbsp; is a product of &nbsp;
+        <a href="/" class="mp3pam">MP3 Pam</a> &nbsp; is a product of &nbsp;
         <a href="https://jgb.solutions" target="_blank" class="jgb-solutions"
           ><img src="/logo-jgb-solutions-white-orange.png"
         /></a>
@@ -248,9 +256,9 @@
           hours +
           ' Hours ' +
           minutes +
-          ' Minutes ' +
+          ' Min ' +
           seconds +
-          ' Seconds ';
+          ' Secs ';
 
         // If the count down is finished, write some text
         if (distance < 0) {
